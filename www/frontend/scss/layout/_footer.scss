@@ -1,0 +1,148 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+.footer{
+  position: relative;
+  min-height: 370px;
+  padding: 60px 0;
+  background-color: var(--col-dark-blue);
+  @media(max-width: $breakpoint-md){
+    padding: 30px 0;
+    text-align: center;
+  }
+  &__column{
+    @media(max-width: $breakpoint-md){
+      margin-bottom: 30px;
+    }
+    &.active{
+      .footer__title i { transform:  scale(-1)}
+    }
+  }
+  &__hidden{
+    @media(max-width: $breakpoint-md){
+      display: none;
+    }
+  }
+  &__logo{
+    display: block;
+    margin: auto;
+  }
+  &__title{
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 30px;
+    @media(max-width: $breakpoint-md){
+      cursor: pointer;
+    }
+    i{
+      display: none;
+      transition: all 0.3s;
+      @media(max-width: $breakpoint-md){
+        display: inline-block;
+      }
+    }
+  }
+  &__caption{
+    &:after{
+      content: '';
+      width: 1px;
+      position: absolute;
+      top: -60px;
+      bottom: -60px;
+      right: 0;
+      background-color: #3c404c;
+      @media(max-width: $breakpoint-lg){
+        bottom: -215px;
+      }
+      @media(max-width: $breakpoint-md){
+        display: none;
+      }
+    }
+  }
+}
+
+.footer-list{
+  @media(max-width: $breakpoint-lg){
+    margin-bottom: 30px;
+  }
+  @media(max-width: $breakpoint-md){
+    margin-bottom: 0;
+  }
+  &__item{
+    display: block;
+  }
+  &__link{
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 14px;
+    color: #fff;
+    transition: all 0.3s;
+    &:hover{
+      color: var(--col-orange);
+    }
+  }
+}
+
+.footer-contact-list{
+  &__item{
+    display: block;
+  }
+  &__link{
+    position: relative;
+    display: inline-block;
+    padding: 5px 0 5px 35px;
+    font-size: 14px;
+    color: #fff;
+    transition: all 0.3s;
+    svg{
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:hover{
+      color: var(--col-orange);
+    }
+  }
+}
+
+.copyright{
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 20px 0 0;
+  width: 180px;
+  opacity: .6;
+  color: #fff;
+  font-size: 12px;
+  position: relative;
+  transition: all .3s;
+  font-weight: 600;
+  @media(max-width: $breakpoint-md){
+    margin: auto;
+  }
+  &:hover{
+    opacity: 1;
+    color: #fff;
+    svg{
+      opacity: 1;
+      overflow: visible;
+    }
+    svg #logo-path {
+      transform-origin: bottom;
+      animation-iteration-count: 1;
+      animation-duration: .45s;
+      animation-name: logo-path;
+    }
+  }
+  svg{
+    fill: #fff;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    transition: all .3s;
+  }
+}

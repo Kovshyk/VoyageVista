@@ -1,0 +1,227 @@
+.uploadArea {
+    display: block;
+    height: auto;
+    border: 1px dashed #cdcdcd;
+    border-radius: 3px;
+    background: #f8f8f8;
+    transition: 0.15s ease border-color, 0.15s ease background-color;
+    cursor: pointer;
+}
+
+.uploadArea .inputFile {
+    opacity: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.uploadArea .placeholder {
+    text-align: center;
+}
+
+.uploadArea .placeholder .placeholderText {
+    font-size: 18px;
+    line-height: 50px;
+}
+
+.uploadArea .placeholder .iconPhoto {
+    display: inline-block;
+    width: 18px;
+    height: 14px;
+    margin: 0 5px -1px -15px;
+    background: url(/admin/assets/plugins/dropZone/img/photo.svg) no-repeat;
+    background-size: contain;
+}
+
+.uploadArea .progress {
+    margin-top: 14px;
+    display: none;
+}
+
+.uploadArea .errorMessage {
+    color: darkred;
+}
+
+.dz-preview {
+    display: none;
+}
+
+.addImages .well {
+    padding: 10px;
+}
+
+.addImages .edit {
+    display: none;
+}
+
+.addImages .well .title {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #e2e7eb;
+    font-size: 21px;
+    color: #333;
+    text-align: center;
+}
+
+.addImages .well .title span:not(#notActive) {
+    cursor: pointer;
+}
+
+.addImages .well .wellContent {
+    margin-top: 5px;
+    overflow: auto;
+    width: 100%;
+    padding: 1px;
+}
+
+.addImages .well .imageConvert .coverText {
+    color: white;
+    opacity: 1;
+}
+
+.addImages .well .imageConvert {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    height: 175px;
+    width: 175px;
+    padding: 4px;
+}
+
+.addImages .well .cover {
+    border-color: #00acac;
+}
+
+.addImages .imageBox {
+    border: 8px solid #b6c2c9;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li, ol li {
+    list-style-type: none;
+}
+
+.addImages .well .imageBox .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    background: rgba(24, 26, 24, 0.74);
+    display: flex;
+    opacity: 0.7;
+
+}
+
+.addImages .well .imageBox .overlay span {
+    margin: auto;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.addImages .well .imageBox:hover {
+    border-color: #348fe2;
+}
+
+.addImages .well .active {
+    border-color: #348fe2
+}
+
+.imageBox img {
+    width: 100%;
+}
+
+.ui-sortable-placeholder {
+    /*display: none;*/
+    /*visibility: hidden;*/
+    /*border: 1px solid;*/
+    margin: 1px;
+}
+
+.panel-placeholder {
+    border: 1px solid;
+}
+
+#sortable {
+    padding: 0;
+    margin: 0;
+}
+
+#price_count {
+    display: none;
+}
+
+.well .title #doDelete:hover {
+    color: #ff5b57;
+}
+
+.well .title #doRotate:hover {
+    color: #348fe2;
+}
+
+.well .title #doCrop:hover {
+    color: #f59c1a;
+}
+
+.well .title #doPreview:hover {
+    color: #00acac;
+    text-decoration: none;
+}
+
+.well .title #doPreview:focus {
+    text-decoration: none;
+}
+
+.well .title #doPreview {
+    color: #333333;
+}
+
+.imageConvert .delete:before {
+    animation: shadow .5s linear infinite;
+}
+
+@-webkit-keyframes tdOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes tdOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.imageConvert .delete {
+    animation: tdOut 0.3s ease-in-out;
+    animation-iteration-count: 1;
+    backface-visibility: hidden;
+}
+
+.jcrop-thumb {
+    top: 20px;
+    right: -160px;
+    border: 1px black solid;
+}
+
+.textError {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color: darkred;
+}

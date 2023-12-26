@@ -1,0 +1,173 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+
+.landscape-message{
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--col-dark-blue);
+  display: none;
+  @media only screen and (max-width: 960px) and (min-aspect-ratio: 13/9){
+    display: block;
+  }
+  &__inner{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    svg{
+      width: 45px;
+      height: 45px;
+      fill: var(--col-orange);
+    }
+    p{
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--col-orange);
+    }
+  }
+}
+
+.page-head{
+  height: 450px;
+  background: center no-repeat;
+  background-size: cover;
+  @media (max-width: $breakpoint-sm) {
+    height: 375px;
+  }
+}
+
+.loader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: var(--col-dark-blue);
+  z-index: 9999;
+  &__body{
+    position: absolute;
+    margin-top: -225px;
+    top: 50%;
+    left: 50%;
+    margin-left: -225px;
+    width: 450px;
+    height: 450px;
+  }
+  &__gif{
+    width: 100px;
+    height: 91px;
+    display: block;
+    background: center no-repeat;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 180px;
+  }
+  &__text{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 200px;
+    margin-top: -15px;
+    div{
+      display: inline-block;
+      font-size: 1.9375rem;
+      font-family: 'Playfair Display', sans-serif;
+      text-transform: uppercase;
+      color: white;
+      @media (max-width: $breakpoint-sm){
+        font-size: 1.3rem;
+      }
+      span{
+        color: var(--col-orange);
+      }
+    }
+  }
+}
+
+.phone-wrapper {
+  position: fixed;
+  bottom: 45px;
+  left: 45px;
+  z-index: 99;
+  visibility: visible;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  opacity: .8;
+  background: var(--col-dark-blue);
+  cursor: pointer;
+  animation: call 2.2s infinite linear;
+  @media (max-width: $breakpoint-lg) {
+    display: none;
+  }
+  &:hover{
+    .phone-icon {
+      animation: shake 0.5s infinite linear;
+    }
+  }
+  .phone-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: url(/frontend/img/phone.png) var(--col-dark-blue) center no-repeat;
+    animation: callrotate 2.2s infinite linear;
+  }
+}
+
+
+.tabcontent{
+  display: none;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+  &.active {
+    display: block;
+  }
+}
+
+
+.static-page{
+  height: 100vh;
+  width: 100%;
+  background: url(/frontend/img/home/header-item-1.png) center no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.pagination-list{
+  text-align: center;
+  &__item{
+    display: inline-block;
+    & + &{
+      margin-left: 10px;
+    }
+  }
+  &__link{
+    display: block;
+    width: 26px;
+    height: 26px;
+    color: #222;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 26px;
+    transition: all 0.3s;
+    &.--button{
+      font-size: 18px;
+      color: var(--col-orange);
+    }
+    &:hover{
+      color: var(--col-orange);
+    }
+    &.active{
+      color: #fff;
+      background-color: var(--col-orange);
+    }
+  }
+}

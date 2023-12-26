@@ -1,0 +1,11 @@
+Header set Cache-Control "max-age=31557600, public"
+<IfModule mod_rewrite.c>
+   RewriteEngine On
+   RewriteCond %{HTTP:X-HTTPS} !1
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteCond %{THE_REQUEST} \s.+?/+[?\s]
+   RewriteRule ^(.+?)/$ https://%{HTTP_HOST}/$1 [R=301,L,NE]
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteRule ^ index.php [L]
+</IfModule>
+

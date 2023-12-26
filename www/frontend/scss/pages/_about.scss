@@ -1,0 +1,184 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+
+.about-top{
+  padding: 30px 60px 60px;
+  background-color: #fff;
+  margin-bottom: 50px;
+  position: relative;
+  @media (max-width: $breakpoint-sm){
+    padding: 30px 30px 0 30px;
+  }
+  i.icon-angle-double-down{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    font-size: 20px;
+    margin-left: -6px;
+    color: #feab30;
+    @media (max-width: $breakpoint-sm){
+      bottom: -30px;
+    }
+  }
+}
+
+.about-how{
+  padding: 80px 0;
+  background-image: url(/frontend/img/backgrounds/wood-bg.jpg);
+}
+
+.how-about-card{
+  margin: auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  background-color: #fff;
+  box-shadow: 0 0 30px rgba(0,0,0,.3);
+}
+
+.about-card-img{
+  background: url(/frontend/img/about-card.jpg) center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  @media (max-width: $breakpoint-sm){
+    min-height: 250px;
+  }
+}
+
+.about-card-text{
+  padding: 45px;
+  @media (max-width: $breakpoint-sm){
+    padding: 30px;
+  }
+  &__title{
+    font-size: 24px;
+    color: #feab30;
+    text-align: center;
+    text-transform: none;
+    font-family: 'Playfair Display', sans-serif;
+    @media (max-width: $breakpoint-sm){
+      font-size: 20px;
+    }
+  }
+  &__txt{
+    color: #797979;
+    font-style: italic;
+    text-align: center;
+    margin: 30px 0;
+    padding: 30px 0;
+    position: relative;
+    @media (max-width: $breakpoint-sm){
+      margin: 15px 0;
+      padding: 15px 0;
+    }
+  }
+  &__line{
+    content: '';
+    position: absolute;
+    display: block;
+    left: 15%;
+    right: 15%;
+    background-color: #ececec;
+    height: 1px;
+    &.--line-1{    top: 0;}
+    &.--line-2{    bottom: 0;}
+  }
+}
+
+.about-result{
+  margin: 100px 0;
+  @media (max-width: $breakpoint-sm){
+    margin: 75px 0;
+  }
+  &__title{
+    margin-bottom: 60px;
+    @media (max-width: $breakpoint-sm){
+      margin: 30px 0;
+    }
+  }
+}
+
+.result-row{
+  position: relative;
+  @media (max-width: $breakpoint-md){
+    margin-bottom: 30px;
+    &.--reverse{
+      .column-first{
+        order: 2;
+      }
+      .column-second{
+        order: 1;
+      }
+    }
+  }
+}
+
+.result-img{
+  display: block;
+  height: 300px;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  background: center no-repeat;
+  background-size: cover;
+}
+
+.result-text {
+   max-width: 350px;
+   z-index: 1;
+   position: relative;
+  @media (max-width: $breakpoint-md){
+    max-width: 100%;
+    padding: 30px;
+  }
+}
+
+.result-count{
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  z-index: 3;
+  box-shadow: 0 0 20px rgba(0,0,0,.15);
+  position: absolute;
+  left: 50%;
+  margin-left: -75px;
+  top: 50%;
+  margin-top: -75px;
+  @media (max-width: $breakpoint-md){
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+  }
+  .result-count-body {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 130px;
+    width: 130px;
+    margin: 10px;
+    border: 1px solid var(--col-orange);
+    @media (max-width: $breakpoint-md){
+      height: 60px;
+      width: 60px;
+    }
+    span{
+      color: var(--col-orange);
+      font-family: "Playfair Display", sans-serif;
+      font-size: 60px;
+      margin: auto;
+      top: -10px;
+      position: relative;
+      @media (max-width: $breakpoint-md){
+        font-size: 30px;
+        top: 0;
+      }
+    }
+  }
+}

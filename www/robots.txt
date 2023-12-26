@@ -1,0 +1,21 @@
+User-agent: *
+Disallow: /*
+Disallow: *
+Disallow: /de*
+Disallow: /en*
+
+Disallow: */objects?section=bath#home-types
+Disallow: */objects?section=designing#home-types
+Disallow: */objects?section=safety#home-types
+Disallow: */objects?section=lots#home-types
+Disallow: */objects?section=pavilions#home-types
+
+Disallow: */services?section=documents#servis
+Disallow: */services?section=fireplaces#servis
+Disallow: */services?section=saunas#servis
+Disallow: */services?section=water#servis
+Disallow: */services?section=stavni#servis
+Disallow: */services?section=furniture#servis
+
+
+Sitemap: https://wonder-wood.com.ua/sitemap.xml

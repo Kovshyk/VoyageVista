@@ -1,0 +1,349 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+#servis{
+  position: relative;
+  overflow: hidden;
+  .breadcrumbs{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    max-width: 1110px;
+    padding: 20px 15px;
+    margin: auto;
+  }
+}
+
+.servis-sidebar{
+  padding: 100px 15px 100px 15px;
+  position: relative;
+  @media (max-width: $breakpoint-lg){
+    padding: 75px 45px 50px 45px;
+  }
+  @media (max-width: $breakpoint-sm){
+    padding: 65px 15px 45px 15px;
+  }
+  .servis-left, .servis-right{
+    display: none;
+    position: absolute;
+    width: 30px;
+    font-size: 21px;
+    cursor: pointer;
+    z-index: 9;
+    top: 60%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: var(--col-orange);
+    margin-top: -7px;
+    transition: all 0.3s ease;
+    @media (max-width: $breakpoint-lg){
+      display: inline-block;
+    }
+    @media (max-width: $breakpoint-sm){
+      margin-top: -9px;
+    }
+  }
+  .servis-left{
+    left: 0;
+    @media (max-width: $breakpoint-sm){
+      left: -10px;
+    }
+  }
+  .servis-right{
+    right: 0;
+    @media (max-width: $breakpoint-sm){
+      right: -10px;
+    }
+  }
+  &__img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -300%;
+    right: 0;
+    z-index: -1;
+    background: url(/frontend/img/backgrounds/tree-bg.jpg) 4px 0 no-repeat;
+    background-size: cover;
+    @media (max-width: $breakpoint-lg){
+      background-repeat: repeat;
+      background-size: inherit;
+    }
+  }
+  &__title{
+    display: block;
+    font-size: 30px;
+    font-family: 'Playfair Display', sans-serif;
+    color: var(--col-orange);
+    margin-bottom: 20px;
+    text-transform: none;
+    @media (max-width: $breakpoint-lg){
+      text-align: center;
+    }
+  }
+}
+
+.servis-sidebar-list{
+  margin-top: 40px;
+  @media (max-width: $breakpoint-lg){
+    position: relative;
+    width: 100%;
+    height: 55px;
+    margin: 45px auto 0 auto;
+    white-space: nowrap;
+    text-align: center;
+    overflow-x: auto;
+    overflow: -moz-scrollbars-none;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+      width: 0;
+      background: transparent;
+    }
+  }
+  li{
+    position: relative;
+    height: 50px;
+    padding: 0;
+    line-height: 26px;
+    display: block;
+    @media (max-width: $breakpoint-lg){
+      display: inline-block;
+    }
+    a{
+      padding-left: 60px;
+      color: #222;
+      font-family: 'Open Sans',sans-serif;
+      margin: 0;
+      line-height: 22px;
+      transition: all .3s ease;
+      &:hover{
+        color: var(--col-orange);
+        .line{
+          background-color: var(--col-orange);
+          transform: rotate(45deg);
+        }
+      }
+      &.active{
+        font-weight: bold;
+        font-size: 16px;
+        .line{
+          background-color: var(--col-orange);
+          top: 14px;
+        }
+      }
+      .line{
+        width: 30px;
+        height: 2px;
+        display: block;
+        position: absolute;
+        top: 10px;
+        transition: all .3s ease;
+        background-color: #222;
+        @media (max-width: $breakpoint-lg){
+          display: none;
+        }
+      }
+      @media (max-width: $breakpoint-lg){
+        position: relative;
+        padding: 0 15px;
+        &.active{
+          font-weight: 400;
+          font-size: 14px;
+          color: var(--col-orange);
+        }
+        &.active:after{
+          content: '';
+          position: absolute;
+          left: 15px;
+          right: 15px;
+          height: 2px;
+          background: var(--col-orange);
+          top: 33px;
+        }
+      }
+      @media (max-width: $breakpoint-sm){
+        &.active:after{
+          top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.servis-wrap {
+  position: relative;
+  min-height: 750px;
+  padding: 100px 15px 100px 15px;
+  @media (max-width: $breakpoint-lg){
+    min-height: auto;
+    padding: 50px 15px 100px 15px;
+  }
+  &__title{
+    font-size: 30px;
+    font-family: 'Playfair Display', sans-serif;
+    color: var(--col-orange);
+    margin-bottom: 30px;
+    text-transform: none;
+  }
+}
+
+.fireplaces-wrap{
+  min-height: 390px;
+  margin: 100px -15px 0 -15px;
+  position: relative;
+  .fireplaces-img{
+    position: absolute;
+    bottom: -100px;
+    top: 0;
+    left: -110px;
+    right: -100%;
+    z-index: -2;
+    background: url(/frontend/img/services/fireplace/fireplaces-bg.jpg) center;
+    background-size: cover;
+  }
+  &__hidden-column{
+    @media (max-width: $breakpoint-md){
+      display: none;
+    }
+  }
+}
+
+.fireplaces-carousel{
+  transform: translate(0,-50px);
+  background-color: #fff;
+  border: 10px solid #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,.15);
+  .flickity-prev-next-button {
+    position: absolute;
+    bottom: 0;
+    width: 45px;
+    height: 45px;
+    opacity: 1;
+    border-radius: 0;
+    border: none;
+    top: inherit;
+    background: var(--col-dark-blue);
+    cursor: pointer;
+    transition: all .3s ease;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    svg {
+      position: absolute;
+      left: 30%;
+      top: 20%;
+      width: 40%;
+      height: 60%;
+    }
+    .arrow {
+      fill: #fff;
+    }
+  }
+  .flickity-prev-next-button.previous {
+    right: 45px;
+    left: inherit;
+    border-right: 1px solid #595e69;
+  }
+  .flickity-prev-next-button.next {
+    right: 0;
+  }
+}
+
+.fireplaces-slide{
+  height: 360px;
+  position: relative;
+  transition: all ease;
+  z-index: 10;
+  width: 100%;
+  background: center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.saunas-thumbnials-item, .stavni-thumbnials-item{
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  background: center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin-bottom: 30px;
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    background-color: rgba(255, 174, 0, 0.75);
+  }
+  &:hover:before{
+    opacity: 1;
+  }
+}
+
+.stavni-wrap{
+  position: relative;
+  padding-top: 45px;
+  margin-top: 60px;
+  .stavni-img{
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    right: -100%;
+    left: -109px;
+    bottom: -160px;
+    background-image: url(/frontend/img/backgrounds/stavni-bg.jpg);
+  }
+}
+
+.stavni-thumbnials-item{
+  height: 160px;
+}
+
+.furniture-thumbnials-item{
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  @media (max-width: 575px){
+    max-width: 315px;
+    margin: auto;
+  }
+  &.--large{
+    height: 265px;
+    margin-bottom: 30px;
+    @media (max-width: 575px){
+      height: 200px;
+    }
+  }
+  &.--small{
+    height: 125px;
+    margin-bottom: 15px;
+    @media (max-width: 575px){
+      height: 200px;
+    }
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    background-color: rgba(255, 174, 0, 0.75);
+  }
+  &:hover:before{
+    opacity: 1;
+  }
+}

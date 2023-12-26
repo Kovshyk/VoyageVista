@@ -1,0 +1,41 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+.info-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 15px 0;
+  @media (max-width: $breakpoint-lg) {
+    display: none;
+  }
+  &__list{
+    text-align: right;
+  }
+  &__item{
+    position: relative;
+    display: inline-block;
+    padding-left: 30px;
+    svg{
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    & + &{
+      margin-left: 30px;
+    }
+  }
+  &__link{
+    display: inline-block;
+    color: var(--col-white);
+    font-size: 14px;
+    font-weight: 600;
+    transition: all .3s;
+    &:hover{
+      color: var(--col-orange);
+    }
+  }
+}

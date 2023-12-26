@@ -1,0 +1,171 @@
+/* menu */
+@-webkit-keyframes menu{
+  0%{
+    opacity: 0;
+    transform: rotateY(-90deg) translateY(30px);
+  }
+  100%{
+    opacity: 1;
+    transform: rotateY(0) translateY(0);
+  }
+}
+
+@keyframes menu{
+  0%{
+    opacity: 0;
+    transform: rotateY(-90deg) translateY(30px);
+  }
+  100%{
+    opacity: 1;
+    transform: rotateY(0) translateY(0);
+  }
+}
+
+/* fade */
+@-webkit-keyframes fadeEffect{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@keyframes fadeEffect{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+/* modal */
+@-webkit-keyframes modalcon{
+  0%{
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes modalcon{
+  0%{
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes modalaway{
+  0%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+}
+
+@keyframes modalaway{
+  0%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+}
+
+
+// copyright animation
+@keyframes logo-path {
+  0% {
+    transform: translate(0) rotate(-20deg);
+  }
+  20% {
+    transform: translate(0) rotate(0deg);
+  }
+  40% {
+    transform: translate(0) rotate(20deg);
+  }
+  60% {
+    transform: translate(0) rotate(0deg);
+  }
+  70% {
+    transform: translate(0) rotate(-10deg);
+  }
+  80% {
+    transform: translate(0) rotate(0deg);
+  }
+  90% {
+    transform: translate(0) rotate(10deg);
+  }
+  100% {
+    transform: translate(0) rotate(0deg);
+  }
+}
+@-webkit-keyframes logo-path {
+  0% {
+    transform: translate(0) rotate(-20deg);
+  }
+  20% {
+    transform: translate(0) rotate(0deg);
+  }
+  40% {
+    transform: translate(0) rotate(20deg);
+  }
+  60% {
+    transform: translate(0) rotate(0deg);
+  }
+  70% {
+    transform: translate(0) rotate(-10deg);
+  }
+  80% {
+    transform: translate(0) rotate(0deg);
+  }
+  90% {
+    transform: translate(0) rotate(10deg);
+  }
+  100% {
+    transform: translate(0) rotate(0deg);
+  }
+}
+
+//call
+@-webkit-keyframes call {
+  0% {box-shadow: 0 0 8px 6px rgba(39,44,58, 0), 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(39,44,58, 0);}
+  10% {box-shadow: 0 0 8px 6px #272C3A, 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px #272C3A;}
+  100% {box-shadow: 0 0 8px 6px rgba(39,44,58, 0), 0 0 0 40px rgba(0,0,0,0), 0 0 0 40px rgba(39,44,58, 0);}
+}
+@keyframes call {
+  0% {box-shadow: 0 0 8px 6px rgba(39,44,58, 0), 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(39,44,58, 0);}
+  10% {box-shadow: 0 0 8px 6px #272C3A, 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px #272C3A;}
+  100% {box-shadow: 0 0 8px 6px rgba(39,44,58, 0), 0 0 0 40px rgba(0,0,0,0), 0 0 0 40px rgba(39,44,58, 0);}
+}
+@-webkit-keyframes call {
+  0% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+  25% {-ms-transform:rotate(30deg);-webkit-transform:rotate(30deg);transform:rotate(30deg);}
+  50% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+  75% {-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
+  100% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+}
+@keyframes callrotate {
+  0% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+  25% {-ms-transform:rotate(30deg);-webkit-transform:rotate(30deg);transform:rotate(30deg);}
+  50% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+  75% {-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
+  100% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+}
+@-webkit-keyframes shake {
+  10%, 90% {transform: translate3d(-1px, 0, 0);}
+  20%, 80% {transform: translate3d(2px, 0, 0);}
+  30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
+  40%, 60% {transform: translate3d(4px, 0, 0);}
+}
+@keyframes shake {
+  10%, 90% {transform: translate3d(-1px, 0, 0);}
+  20%, 80% {transform: translate3d(2px, 0, 0);}
+  30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
+  40%, 60% {transform: translate3d(4px, 0, 0);}
+}

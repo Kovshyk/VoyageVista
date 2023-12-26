@@ -1,0 +1,34 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+
+.breadcrumbs {
+  padding: 20px 0;
+  font-size: 13px;
+  color: var(--col-darker-grey);
+  @media (max-width: $breakpoint-sm) {
+    padding: 10px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  &__item {
+    display: inline-block;
+    @media (max-width: $breakpoint-sm) {
+      display: inline;
+    }
+    & + &:before {
+      content: "/\00a0";
+    }
+  }
+  &__link{
+    display: inline-block;
+    transition: all 0.3s;
+    &.active {
+      color: var(--col-orange);
+    }
+    &:hover{
+      color: var(--col-orange);
+    }
+  }
+}
